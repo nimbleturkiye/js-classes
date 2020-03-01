@@ -1,0 +1,63 @@
+@startuml "Class Diagram"
+
+class User <<Entity>> {
+  + name: String
+  + email: String
+  + phone: String
+  + wallItems: [Wall]
+  + findPT(): [PT]
+  + createWall(): Wall
+}
+
+class PT <<Entity>> {
+  + price: Number
+  + branch: Branch
+  + locations: Location[]
+}
+
+class Athlete <<Entity>> {
+  + measurements: Measurement[]
+}
+
+enum Branch {
+  FITNESS
+  BODY_BUILDING
+  YOGA
+}
+
+interface Measurement <<ValueObject>> {
+  + type: String
+  + value: Number
+  + unit: String
+}
+
+class BMI <<ValueObject>> {
+  + type: String
+  + value: Number
+  + unit: String
+}
+
+class Wall <<Entity>> {
+  + text: String
+  + user: User
+  + comments: [Wall]
+}
+
+class Location <<Entity>> {
+  + coords: Number[]
+  + name: String
+}
+
+class Discount <<Entity>> {
+  + discountPercentage: Number
+}
+
+BMI -up-|> Measurement
+Athlete -up-|> User
+PT -up-|> User
+PT --> "1" Branch
+PT "1..n" o--> "0..n" Location
+User "0..n" *--> "1" Wall
+Athlete --> Discount
+
+@enduml
