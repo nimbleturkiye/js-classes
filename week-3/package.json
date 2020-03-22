@@ -1,0 +1,21 @@
+{
+  "name": "week-3",
+  "version": "1.0.0",
+  "description": "In-class examples for week-3",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "watch": "nodemon --ignore '*.json'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Armagan Amcalar <armagan@amcalar.com>",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "flatted": "^2.0.1",
+    "uuid": "^7.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
