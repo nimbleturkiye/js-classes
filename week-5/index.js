@@ -1,12 +1,16 @@
 const { passengerDatabase, driverDatabase } = require('./database')
 const printBookingHistory = require('./lib/print-booking-history')
 
-const stefan = driverDatabase.findBy('name', 'Stefan')
-const armagan = passengerDatabase.findByName('Armagan')
+async function main() {
+  const stefan = await driverDatabase.findBy('name', 'Stefan')
+  const armagan = await passengerDatabase.findByName('Armagan')
 
-armagan.book(stefan, 'Kreuzberg', 'Wannsee')
-passengerDatabase.update(armagan)
+  armagan.book(stefan, 'Kreuzberg', 'Wannsee')
+  passengerDatabase.update(armagan)
 
-printBookingHistory(armagan)
+  printBookingHistory(armagan)
 
-console.log(passengerDatabase.findBy('location', 'Mitte'))
+  console.log(await passengerDatabase.findBy('location', 'Mitte'))
+}
+
+main()

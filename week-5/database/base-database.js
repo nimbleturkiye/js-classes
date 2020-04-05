@@ -33,22 +33,22 @@ class BaseDatabase {
     return this.save(objects.concat(object))
   }
 
-  remove(index) {
-    const objects = this.load()
+  async remove(index) {
+    const objects = await this.load()
 
     objects.splice(index, 1)
-    this.save(objects)
+    await this.save(objects)
   }
 
-  update(object) {
-    const objects = this.load()
+  async update(object) {
+    const objects = await this.load()
 
     const index = objects.findIndex(o => o.id == object.id)
 
     if (index == -1) throw new Error(`Cannot find ${this.model.name} instance with id ${object.id}`)
 
     objects.splice(index, 1, object)
-    this.save(objects)
+    await this.save(objects)
   }
 
   async find(id) {
