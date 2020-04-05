@@ -1,0 +1,12 @@
+extends layout
+block content
+  h2 Passenger Detail
+  p #{passenger.name}
+
+  h3 Booking History
+  if passenger.bookings.length
+    ol
+      each booking in passenger.bookings
+        li From #{booking.origin} to #{booking.destination}
+  else
+    p No bookings

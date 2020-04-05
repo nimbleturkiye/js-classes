@@ -30,11 +30,29 @@ class BaseDatabase {
 
   async insert(object) {
     const objects = await this.load()
-    return this.save(objects.concat(object))
+
+    if (!(object instanceof this.model)) {
+      object = this.model.create(object)
+    }
+
+    await this.save(objects.concat(object))
+
+    return object
   }
 
   async remove(index) {
     const objects = await this.load()
+
+    objects.splice(index, 1)
+    await this.save(objects)
+  }
+
+  async removeBy(property, value) {
+    const objects = await this.load()
+
+    const index = objects.findIndex(o => o[property] == value)
+
+    if (index == -1) throw new Error(`Cannot find ${this.model.name} instance with ${property} ${value}`)
 
     objects.splice(index, 1)
     await this.save(objects)
