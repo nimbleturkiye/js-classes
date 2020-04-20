@@ -1,0 +1,107 @@
+[[
+  "1",
+  "2",
+  "3"
+],{
+  "id": "4",
+  "name": "5",
+  "location": "6",
+  "bookings": "7"
+},{
+  "id": "8",
+  "name": "9",
+  "location": "10",
+  "bookings": "11"
+},{
+  "id": "12",
+  "name": "13",
+  "location": "14",
+  "bookings": "15"
+},"01ed8529-ad31-4351-b092-21cabb931e16","Armagan","Kreuzberg",[
+  "16",
+  "17",
+  "18",
+  "19"
+],"68e6a08c-f4cf-486e-b1df-dac92576bc48","Mert","Mitte",[
+  "20"
+],"db80ba9d-c327-4222-b62c-f5f230a3e0b6","Betul","Tegel",[
+  "21",
+  "22",
+  "23"
+],{
+  "driver": "24",
+  "passenger": "25",
+  "origin": "6",
+  "destination": "26"
+},{
+  "driver": "24",
+  "passenger": "25",
+  "origin": "26",
+  "destination": "10"
+},{
+  "driver": "24",
+  "passenger": "25",
+  "origin": "10",
+  "destination": "6"
+},{
+  "driver": "24",
+  "passenger": "25",
+  "origin": "6",
+  "destination": "27"
+},{
+  "driver": "24",
+  "passenger": "28",
+  "origin": "10",
+  "destination": "6"
+},{
+  "driver": "29",
+  "passenger": "30",
+  "origin": "27",
+  "destination": "6"
+},{
+  "driver": "31",
+  "passenger": "32",
+  "origin": "6",
+  "destination": "33"
+},{
+  "driver": "34",
+  "passenger": "3",
+  "origin": "33",
+  "destination": "10"
+},{
+  "id": "35",
+  "name": "36",
+  "location": "37"
+},{
+  "id": "4",
+  "name": "5",
+  "location": "6",
+  "bookings": "7"
+},"Neukolln","SXF",{
+  "id": "8",
+  "name": "9",
+  "location": "10",
+  "bookings": "11"
+},{
+  "id": "35",
+  "name": "36",
+  "location": "37"
+},{
+  "id": "12",
+  "name": "13",
+  "location": "14",
+  "bookings": "15"
+},{
+  "id": "35",
+  "name": "36",
+  "location": "37"
+},{
+  "id": "12",
+  "name": "13",
+  "location": "14",
+  "bookings": "15"
+},"TXL",{
+  "id": "35",
+  "name": "36",
+  "location": "37"
+},"33722c67-7b62-4dbb-81cb-e64a9aba6713","Stefan","Treptower Park"]
