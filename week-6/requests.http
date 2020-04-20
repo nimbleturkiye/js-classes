@@ -1,0 +1,18 @@
+POST http://localhost:3000/passengers HTTP/1.1
+content-type: application/json
+
+{"name":"new client to mongodb", "location": "kuzguncuk"}
+
+###
+
+GET http://localhost:3000/passengers/5e9de4cd9f11eb7402e56941 HTTP/1.1
+
+###
+DELETE http://localhost:3000/passengers/5e9de11c0b0ac272d7866b1b HTTP/1.1
+
+###
+
+PATCH http://localhost:3000/passengers/5e9de4cd9f11eb7402e56941 HTTP/1.1
+content-type: application/json
+
+{"name": "new name4"}
