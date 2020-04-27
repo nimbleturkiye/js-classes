@@ -1,7 +1,7 @@
 const Passenger = require('./models/passenger')
 const Driver = require('./models/driver')
-const passengerDatabase = require('./database/passenger-database')
-const driverDatabase = require('./database/driver-database')
+const passengerService = require('./services/passenger-services')
+const driverService = require('./services/driver-services')
 
 const printBookingHistory = require('./lib/print-booking-history')
 
@@ -17,14 +17,14 @@ mert.book(stefan, 'Mitte', 'Kreuzberg')
 
 async function main() {
   try {
-    await passengerDatabase.save([armagan, mert])
+    await passengerService.save([armagan, mert])
 
-    await driverDatabase.save([stefan])
+    await driverService.save([stefan])
 
     const betul = Passenger.create({ name: 'Betul', location: 'Tegel' })
 
-    await passengerDatabase.insert(betul)
-    const passengers = await passengerDatabase.load()
+    await passengerService.insert(betul)
+    const passengers = await passengerService.load()
     passengers.forEach(printBookingHistory)
   } catch (e) {
     return console.log(e)

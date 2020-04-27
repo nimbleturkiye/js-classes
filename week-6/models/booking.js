@@ -1,10 +1,20 @@
-class Booking {
-  constructor(driver, passenger, origin, destination) {
-    this.driver = driver
-    this.passenger = passenger
-    this.origin = origin
-    this.destination = destination
-  }
-}
+const mongoose = require('mongoose')
 
-module.exports = Booking
+const BookingSchema = new mongoose.Schema({
+  driver: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Driver',
+    autopopulate: { maxDepth: 1 }
+  },
+  passenger: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Passenger',
+    autopopulate: { maxDepth: 1 }
+  },
+  origin: String,
+  destination: String
+})
+
+BookingSchema.plugin(require('mongoose-autopopulate'))
+
+module.exports = mongoose.model('Booking', BookingSchema)
