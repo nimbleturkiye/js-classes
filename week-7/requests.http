@@ -1,0 +1,41 @@
+POST http://localhost:3000/passengers HTTP/1.1
+content-type: application/json
+
+{"name":"armagan", "location": "kuzguncuk"}
+
+###
+
+GET http://localhost:3000/passengers/5ea70b28bbf7cb710503f2d4 HTTP/1.1
+
+###
+DELETE http://localhost:3000/passengers/5e9de11c0b0ac272d7866b1b HTTP/1.1
+
+###
+
+PATCH http://localhost:3000/passengers/5e9de4cd9f11eb7402e56941 HTTP/1.1
+content-type: application/json
+
+{"name": "new name4"}
+
+###
+
+POST http://localhost:3000/drivers HTTP/1.1
+content-type: application/json
+
+{"name":"older driver", "age": 35, "location": "kuzguncuk"}
+
+###
+DELETE http://localhost:3000/drivers/5ea70bf063b0877147bd3e6b HTTP/1.1
+
+###
+POST http://localhost:3000/passengers/5ea70b28bbf7cb710503f2d4/bookings HTTP/1.1
+content-type: application/json
+
+{"driverId": "5ea724416e3b607ac41df63a", "origin": "Kabatas", "destination": "Pendik"}
+
+###
+
+PATCH http://localhost:3000/drivers/5ea70c8063b0877147bd3e6c HTTP/1.1
+content-type: application/json
+
+{"name": "a newer surname"}
