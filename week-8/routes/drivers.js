@@ -3,9 +3,7 @@ const { driverService } = require('../services')
 const router = require('express').Router()
 
 router.get('/', async (req, res) => {
-  const drivers = await driverService.load()
-
-  res.render('drivers', { drivers })
+  res.send(await driverService.load())
 })
 
 router.post('/', async (req, res) => {

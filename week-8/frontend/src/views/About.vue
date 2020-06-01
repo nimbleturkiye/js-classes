@@ -1,10 +1,14 @@
 <script>
 import HelloWorld from '@/components/HelloWorld.vue'
+import { mapState } from 'vuex'
 
 export default {
   name: 'About',
   components: {
     HelloWorld
+  },
+  computed: {
+    ...mapState(['countAbout'])
   }
 }
 </script>
@@ -12,5 +16,5 @@ export default {
 <template lang="pug">
   .about
     h1 This is an about page
-    HelloWorld(msg="This is Istanbul!")
+    HelloWorld(type="countAbout" :count="countAbout" msg="This is Bostanci!")
 </template>
