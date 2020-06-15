@@ -1,0 +1,7 @@
+node_modules
+coverage
+tests
+requests.http
+__mocks__
+jest.config.jest
+Dockerfile

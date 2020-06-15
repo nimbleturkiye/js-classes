@@ -1,0 +1,30 @@
+{
+  "name": "week-9",
+  "version": "1.0.0",
+  "description": "In-class examples for week-9",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .bin/www",
+    "watch": "nodemon --ignore '*.json' .bin/www",
+    "test": "jest --coverage --verbose",
+    "test-watch": "jest --coverage --verbose --watch"
+  },
+  "author": "Armagan Amcalar <armagan@amcalar.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "flatted": "^2.0.1",
+    "mongoose": "^5.9.9",
+    "mongoose-autopopulate": "^0.12.2",
+    "pug": "^2.0.4",
+    "uuid": "^7.0.2"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
+  }
+}
