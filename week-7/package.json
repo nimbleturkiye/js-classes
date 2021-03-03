@@ -18,7 +18,7 @@
     "flatted": "^2.0.1",
     "mongoose": "^5.9.9",
     "mongoose-autopopulate": "^0.12.2",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "uuid": "^7.0.2"
   },
   "devDependencies": {
